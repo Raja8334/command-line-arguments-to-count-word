@@ -18,18 +18,19 @@ Print number of words present in given file.
 ### Step 6: 
 End of the program.
 ## PROGRAM:
-````
+````python
 #DEVELOPED BY: Raja R
 #REGISTER NO: 22004914
-
 import sys
-fp= open(sys.argv[1])
-data=fp.read()
-words=data.split()
-print("Total Words:",len(words))
+count= 0
+with open(sys.argv[1],'r') as f1:
+    for line in f1:
+        word= line.split()
+        count += len(word)
+print("word count in file = ",count)
 ````
 ### OUTPUT:
-![2](https://user-images.githubusercontent.com/120719634/215015051-e44a9893-ec64-4aab-9c45-45b77d7456a1.png)
+!['2'](/comandline.jpeg)
 
 ## RESULT:
 Thus the program is written to find the word count from the contents of a file using command line arguments.
